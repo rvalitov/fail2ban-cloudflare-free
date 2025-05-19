@@ -17,11 +17,15 @@ The project is designed for Cloudflare's free tier, which allows **1 custom IP l
    - Navigate to **My Profile > API Tokens > Create a Token > Create a Custom Token**.
    - Name the token (e.g., `fail2ban`) and grant permissions:
      - **Account > Account Filter List > Edit**
+   ![image](https://github.com/user-attachments/assets/8545bf46-6ce9-4a60-8566-bbeec90fe346)
+
    - Save the token securely.
    - Go to **Manage Account > Configurations > Lists**.
    - Create a new list with:
      - **Type**: IP
      - **Name**: `block_list`
+       ![image](https://github.com/user-attachments/assets/b47d9ec1-8d66-437d-82ee-eaf29d955604)
+
    - Save the **List ID** and your **Account ID** from the dashboard or API. You can obtain this data from the URL when editing the list. The URL looks like: `https://dash.cloudflare.com/<user id>/configurations/lists/<list id>`
 
 2. **Install Fail2Ban** (if not installed):
@@ -49,6 +53,8 @@ The project is designed for Cloudflare's free tier, which allows **1 custom IP l
        - **Operator**: Is in list
        - **Value**: `block_list`
        - **Action**: Block
+         ![image](https://github.com/user-attachments/assets/d6fbd69e-4896-4db8-8c1f-a96f9829f382)
+
      - Save and deploy.
 
 2. **Fail2Ban Jail**:
