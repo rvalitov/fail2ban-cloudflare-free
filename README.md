@@ -1,5 +1,9 @@
 # Fail2Ban with Cloudflare Integration (Free Tier)
 
+![Language: Bash](https://img.shields.io/badge/Language-Bash-blue)
+![Dependencies: curl, js](https://img.shields.io/badge/Dependencies-curl%2C%20jq-orange)
+![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203-green)
+
 This project integrates [Fail2Ban](https://www.fail2ban.org/) with [Cloudflare Security Rules](https://developers.cloudflare.com/security/rules/) to block malicious IP addresses by managing the [Cloudflare custom IP list](https://developers.cloudflare.com/waf/tools/lists/custom-lists/#ip-lists). 
 It uses a Bash script to add or remove IPs from a Cloudflare blocklist, triggered by Fail2Ban to detect and ban IPs after failed login attempts (e.g., SSH, FTP, WordPress or Home Assistant, etc.).
 The project is designed for Cloudflare's free tier, which allows **1 custom IP list with a maximum of 10,000 IP addresses**, and is inspired by the Python-based approach in [Using Fail2Ban with Cloudflare on a free account](https://kovasky.me/blogs/cloudflare_fail2ban/) by Kovasky Buezo.
